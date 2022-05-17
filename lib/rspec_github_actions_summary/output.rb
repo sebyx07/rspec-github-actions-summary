@@ -51,7 +51,7 @@ class RspecGithubActionsSummary
     end
 
     def failed_examples
-      lines = example_groups.map(&:render_failed_examples)
+      lines = example_groups.map(&:render_failed_examples).flatten
       return if lines.blank?
 
       <<~MD

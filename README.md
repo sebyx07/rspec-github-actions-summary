@@ -23,11 +23,11 @@ Job run summary generated at run-time by [RSpec Github Actions Summary](https://
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add rspec_github_actions_summary
+    $ bundle add rspec-github-actions-summary --group 'test'
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install rspec_github_actions_summary
+    $ gem install rspec-github-actions-summary
 
 ## Usage
 
@@ -36,7 +36,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 require 'rspec_github_actions_summary'
 ```
 
-```
+```text
 # inside your .rspec
 --format RspecGithubActionsSummary
 ```

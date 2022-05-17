@@ -57,7 +57,7 @@ class RspecGithubActionsSummary
         passed_specs: passed,
         failed_specs: failed,
         skipped_specs: skipped_specs,
-        duration: notification.duration.round,
+        duration: notification.duration.ceil,
         failed: notification.failed_examples.map do |ex|
           format_failed_example(ex)
         end

@@ -1,8 +1,23 @@
-# RspecGithubActionsSummary
+# RSpec Github Actions Summary
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rspec_github_actions_summary`. To experiment with that code, run `bin/console` for an interactive prompt.
+Github Actions Summary for RSpec, works with or without rails.
 
-TODO: Delete this and the text above, and describe your gem
+## Sample
+
+# Test results
+
+|Test Result|Passed ✅|Failed ❌|Skipped 🔃|Total|Time duration ⏰|
+|:--|:--|:--|:--|:--|:--|
+|❌ Failed|2|1|1|4|10 seconds|
+
+---
+## Failed specs
+```bash
+bin/rspec path_to_spec # Example description
+```
+
+---
+Job run summary generated at run-time by [RSpec Github Actions Summary](https://github.com/sebyx07/rspec-github-actions-summary)
 
 ## Installation
 
@@ -16,7 +31,23 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+# inside your spec_helper.rb, not necessary for rails
+require 'rspec_github_actions_summary'
+```
+
+```
+# inside your .rspec
+--format RspecGithubActionsSummary
+```
+
+```yaml
+# inside .github/workflows/your-workflow.yml
+- name: RSpec
+  run: |
+    bundle exec rspec
+    bundle exec rspec-gh-summary >> $GITHUB_STEP_SUMMARY
+```
 
 ## Development
 

@@ -44,9 +44,12 @@ require 'rspec_github_actions_summary'
 ```yaml
 # inside .github/workflows/your-workflow.yml
 - name: RSpec
-  run: |
-    bundle exec rspec
-    bundle exec rspec-gh-summary >> $GITHUB_STEP_SUMMARY
+  run: bundle exec rspec
+
+# generate summary even if specs fail
+- name: Generate summary
+  if: always()
+  run: bundle exec rspec-gh-summary >> $GITHUB_STEP_SUMMARY
 ```
 
 ## Development

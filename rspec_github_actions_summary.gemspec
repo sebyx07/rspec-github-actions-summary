@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "RSpec formatter for Github Actions Summary"
   spec.description = "RSpec formatter for Github Actions Summary"
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage = "https://github.com/sebyx07/rspec-github-actions-summary"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 

@@ -1,8 +1,18 @@
 # frozen_string_literal: true
 
-require_relative "rspec_github_actions_summary/version"
+require 'rspec/core/formatters'
+require_relative 'rspec_github_actions_summary/version'
+require_relative 'rspec_github_actions_summary/output'
 
-module RspecGithubActionsSummary
+class RspecGithubActionsSummary
   class Error < StandardError; end
-  # Your code goes here...
+  RSpec::Core::Formatters.register self, :dump_summary
+
+  def initialize(output)
+    @output = output
+  end
+
+  def dump_summary(notification)
+    RspecGithubActionsSummary::TempFileResult.new(notification).write!
+  end
 end

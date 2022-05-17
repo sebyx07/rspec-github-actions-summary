@@ -1,3 +1,4 @@
 --format documentation
+--format RspecGithubActionsSummary
 --color
 --require spec_helper

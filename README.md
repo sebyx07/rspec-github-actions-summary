@@ -1,6 +1,6 @@
 # RSpec Github Actions Summary
 
-Github Actions Summary for RSpec, works with or without rails.
+Github Actions Summary for RSpec, works with or without rails. Compatible with [parallel_tests](https://github.com/grosser/parallel_tests) gem.
 
 ## Sample
 

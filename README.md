@@ -13,7 +13,7 @@ Github Actions Summary for RSpec, works with or without rails. Compatible with [
 ---
 ## Failed specs
 ```bash
-bin/rspec path_to_spec # Example description
+bin/rspec spec/failed_spec.rb # Example description
 ```
 
 ---

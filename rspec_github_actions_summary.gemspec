@@ -34,8 +34,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop', '>= 1.0.0'
   spec.add_development_dependency 'rubocop-rake'
   spec.add_development_dependency 'rubocop-rspec'
-  spec.add_runtime_dependency 'rggen-core'
-  spec.add_runtime_dependency 'rggen-markdown'
+  spec.add_runtime_dependency 'rggen-core', '~> 0.27.0'
+  spec.add_runtime_dependency 'rggen-markdown', '~> 0.23.0'
   spec.add_runtime_dependency 'rspec', '>= 2.0'
 
   # Uncomment to register a new dependency of your gem

@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
-require 'rggen/core'
-require 'rggen/markdown'
+require 'rggen/core/facets'
+require 'rggen/core/utility/code_utility/line'
+require 'rggen/core/utility/code_utility/code_block'
+require 'rggen/core/utility/code_utility'
+require 'rggen/markdown/utility/table_formatter'
 require_relative './temp_file_result'
 require_relative './example_group'
 
